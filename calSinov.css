@@ -1,0 +1,67 @@
+
+header{ display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   width: 300px;
+   height: auto;
+   background-color: rgb(32, 223, 159);
+   padding: 10px;
+   border-radius: 10px;
+}
+.display { background-color: rgba(128, 255, 0, 0.219);
+    width:90%;
+    height: 20px;
+    border: 2px solid grey;
+    border-radius: 5px;
+  
+    padding: 10px;
+    text-align: right;
+    margin:5px;
+    
+  }
+section{
+    width: 100%;
+}
+.row{
+   display: flex;
+    justify-content: center;
+    margin:5px
+}
+button{ 
+    width: 50px;
+    height: 50px;
+    border: 2px solid rgb(0, 141, 35);
+    background-color: black;
+    color: white;
+    border-radius: 50px;
+    margin:5px;
+}
+button:hover{
+    background-color: rgb(34, 33, 33);   
+}
+.operator{
+    background-color: rgb(155, 9, 9);
+    border: rgb(104, 2, 2);
+}
+.operator:hover{
+    background-color: rgb(209, 4, 4);
+    border: rgb(104, 2, 2);
+}
+.tenglik{   background-color: rgb(63, 230, 30);
+    border: 1.5x solid rgb(5, 37, 9);
+    color:black;
+   
+}
+.tenglik:hover{   background-color: rgb(14, 214, 40);
+   
+   
+}
+.c{
+    background-color: blue;
+    border-color: blue;
+}
+.c:hover{
+    border: none;
+    background-color: rgb(3, 3, 153);
+}

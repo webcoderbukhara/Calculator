@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="calSinov.css">
+    
+
+</head>
+
+<body>
+    <header>
+        <div class="display"></div>
+        <section>
+            <div class="row">
+                <button onclick="bajar('7')">7</button>
+                <button onclick="bajar('8')">8</button>
+                <button onclick="bajar('9')">9</button>
+                <button class="operator" onclick="bajar('*')">*</button>
+                <button class="operator" onclick="deleted()"><b>←</b></button>
+            </div>
+            <div class="row">
+                <button onclick="bajar('4')">4</button>
+                <button onclick="bajar('5')">5</button>
+                <button onclick="bajar('6')">6</button>
+                <button class="operator" onclick="bajar('/')">/</button>
+                <button class="operator" onclick="">x<sup>2</sup></button>
+            </div>
+            <div class="row">
+                <button onclick="bajar('1')">1</button>
+                <button onclick="bajar('2')">2</button>
+                <button onclick="bajar('3')">3</button>
+                <button class="operator" onclick="bajar('-')">-</button>
+                <button class="operator" onclick="bajar('+')">+</sup></button>
+            </div>
+            <div class="row">
+                <button class="c" onclick="boshatish()">C</button>
+                <button onclick="bajar(0)">0</button>
+                <button class="tenglik" onclick="tekshir()">=</button>
+                <button class="operator" onclick="bajar('(')">(</button>
+                <button class="operator" onclick="bajar(')')">)</button>
+            </div>
+
+        </section>
+
+    </header>
+
+    <script>
+
+        function boshatish() {
+            document.querySelector('.display').innerHTML = '';
+        }
+        function deleted() {
+            var deletedNumber = document.querySelector('.display').innerHTML;
+            var Leng = deletedNumber.length;
+            document.querySelector('.display').innerHTML = deletedNumber.slice(0, Leng - 1);
+
+        }
+
+        function bajar(raqam) {
+            var num = document.querySelector('.display').innerHTML;
+            num = num + raqam;
+            document.querySelector('.display').innerHTML = num;
+        }
+
+        // document.querySelector('.display').innerHTML = '11+(33+25*10)';
+        function tekshir() {
+            let misol = document.querySelector(".display").innerHTML;
+            misol = eval(misol);
+            document.querySelector(".display").textContent = misol;
+       }
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
